@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+  }
+  #container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://cdn.pixabay.com/photo/2015/01/08/18/25/desk-593327__480.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    z-index: 0;
+  }
+  #container::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  .clock {
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    position: relative;
+    background-image: url("http://4.bp.blogspot.com/-49sbhBtLaFQ/UleciUy8jgI/AAAAAAACjzc/QlQGvPvYysI/s1600/94500098_25.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .clock::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+  h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: left;
+  }
+  #hour {
+    width: 220px;
+    height: 4px;
+    background-color: yellow;
+  }
+  #minute {
+    width: 250px;
+    height: 4px;
+    background-color: white;
+  }
+  #second {
+    width: 270px;
+    height: 4px;
+    background-color: orangered;
+  }
+  
